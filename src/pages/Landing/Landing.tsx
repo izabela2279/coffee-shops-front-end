@@ -1,4 +1,5 @@
 // stylesheets
+import logo from '../../assets/icons/coffeeBeans.png'
 import styles from './Landing.module.css'
 
 // services
@@ -23,6 +24,7 @@ const Landing = (props: LandingProps): JSX.Element => {
   return (
     <main className={styles.container}>
       <h1>Coffee Shops</h1>
+      <img src={logo} alt='beans' />
       { user &&
         <button onClick={handleDeleteAccount}>
           DELETE ACCOUNT
