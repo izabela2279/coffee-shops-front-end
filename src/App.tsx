@@ -16,12 +16,14 @@ import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 // services
 import * as authService from './services/authService'
 import * as profileService from './services/profileService'
+import * as ratingService from './services/ratingService'
 
 // stylesheets
 import './App.css'
 
 // types
 import { User, Profile } from './types/models'
+import { RatingManagerFormData } from './types/forms'
 
 function App(): JSX.Element {
   const navigate = useNavigate()
@@ -52,6 +54,18 @@ function App(): JSX.Element {
     setUser(authService.getUser())
   }
 
+  const handleRating = async(formData: RatingManagerFormData): Promise<void> => {
+    try {
+      const updatedProfile = await ratingService.castRating(formData)
+
+      setProfiles(profiles.map((profile) => (
+        profile.id === updatedProfile.id ? updatedProfile : profile
+      )))
+    } catch (error) {
+      console.log(error);  
+    }
+  }
+
   return (
     <>
       <NavBar user={user} handleLogout={handleLogout} />
@@ -71,6 +85,7 @@ function App(): JSX.Element {
             <ProtectedRoute user={user}>
               <Profiles 
                 profiles={profiles}
+                handleRating={handleRating}
               />
             </ProtectedRoute>
           }

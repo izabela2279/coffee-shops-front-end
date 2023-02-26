@@ -6,9 +6,11 @@ import RatingManager from '../RatingManager/RatingManager'
 
 // types
 import { Profile } from '../../types/models'
+import { RatingManagerFormData } from '../../types/forms'
 
 interface ProfileCardProps {
   profile: Profile;
+  handleRating: (formData: RatingManagerFormData) => void;
 }
 
 const ProfileCard = (props: ProfileCardProps): JSX.Element => {
