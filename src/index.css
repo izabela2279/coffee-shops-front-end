@@ -26,8 +26,13 @@ article{
 }
 
 article>img {
+  margin-top: 50px;
   width: 350px;
   height: 400px;
+}
+
+article section {
+  display: flex;
 }
 
 section img {
