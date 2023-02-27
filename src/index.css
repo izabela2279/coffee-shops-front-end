@@ -46,3 +46,15 @@ section img {
 nav {
   border-bottom: 1px solid black;
 }
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  color: black;
+  padding: 20px;
+}
+
+nav li {
+  margin: 10px;
+}
