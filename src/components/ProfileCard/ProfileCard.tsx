@@ -21,7 +21,7 @@ const ProfileCard = (props: ProfileCardProps): JSX.Element => {
   return (
     <article>
       <img src={profilePic} alt={`${profile.name}`} />
-      <h1>{profile.name}</h1>
+      <h2>{profile.name}</h2>
       <RatingManager { ...props } />
     </article>
   )
