@@ -3,7 +3,7 @@
 <p>Coffee Shops is a platform for posting coffee shops and coffee pictures. It allows users to rate the profiles of coffee shops. Individiuals who use the app can discover new cafes and decide which coffee shop to visit by their ratings.</p>
 
 <h1>
-<a href="" rel="nofollow">Try the App!</a>
+<a href="https://coffee-shop-tracker.netlify.app/" rel="nofollow">Try the App!</a>
 </h1>
 
 <br>

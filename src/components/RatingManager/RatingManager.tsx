@@ -30,7 +30,6 @@ const RatingManager = (props: RatingManagerProps): JSX.Element => {
 
   const handleClick = (evt: React.MouseEvent<HTMLImageElement>): void => {
     const newValue = parseInt(evt.currentTarget.id)
-
     handleRating({ value: newValue, profileId: profile.id })
   }
 
