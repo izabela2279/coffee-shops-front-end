@@ -6,7 +6,7 @@
 <a href="https://coffee-shop-tracker.netlify.app/" rel="nofollow">Try the App!</a>
 </h1>
 
-<img src="/assets/icons/landing.png" >
+<img href="/landing.png" >
 
 <br>
 <h2>Getting Started 🚦</h2>
