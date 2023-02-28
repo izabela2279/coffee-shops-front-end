@@ -1,6 +1,6 @@
 <h1>Coffee Shops</h1>
 
-<p>Coffee Shops is a platform for posting coffee shops or coffee pictures. It allows users to rate the profiles of coffee shops. Individiuals who use the app can discover new cafes and decide which coffee shop to visit by their ratings.</p>
+<p>Coffee Shops is a platform for posting coffee shops and coffee pictures. It allows users to rate the profiles of coffee shops. Individiuals who use the app can discover new cafes and decide which coffee shop to visit by their ratings.</p>
 
 <h1>
 <a href="" rel="nofollow">Try the App!</a>

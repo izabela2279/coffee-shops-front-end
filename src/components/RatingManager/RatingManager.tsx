@@ -7,6 +7,9 @@ import { Profile } from '../../types/models'
 import { RatingManagerFormData } from '../../types/forms'
 import React from 'react';
 
+// npm modules
+import { useState } from 'react';
+
 interface RatingManagerProps {
 	profile: Profile;
   handleRating: (FormData: RatingManagerFormData) => void;
@@ -14,6 +17,8 @@ interface RatingManagerProps {
 
 const RatingManager = (props: RatingManagerProps): JSX.Element => {
 	const { profile, handleRating } = props
+
+  const [hover, setHover] = useState<string | null>(null)
 
   const ratingOptions: [ 1, 2, 3, 4, 5 ] = [ 1, 2, 3, 4, 5 ]
   const ratingCount = profile.ratingsReceived.length
@@ -29,6 +34,14 @@ const RatingManager = (props: RatingManagerProps): JSX.Element => {
     handleRating({ value: newValue, profileId: profile.id })
   }
 
+  const handleHover = (evt: React.MouseEvent): void => {
+    if (evt.type === 'mouseover') {
+      setHover(evt.currentTarget.id)
+    } else if (evt.type === 'mouseleave') {
+      setHover(null)
+    }
+  }
+
   return (
     <section>
       {ratingOptions.map((rating: number): JSX.Element => (
@@ -36,7 +49,9 @@ const RatingManager = (props: RatingManagerProps): JSX.Element => {
           id={rating.toString()}
           key={rating}
           onClick={handleClick}
-          src={rating <= profileRating ? coffeeBeans : noCoffeeBeans}
+          onMouseOver={handleHover}
+          onMouseLeave={handleHover}
+          src={rating <= (hover ?? profileRating) ? coffeeBeans : noCoffeeBeans}
 					alt="Bean Symbol"
         />
       ))}
