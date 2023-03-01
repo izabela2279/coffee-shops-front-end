@@ -10,6 +10,7 @@ body {
     'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: linen;
 }
 
 code {
@@ -51,10 +52,19 @@ nav ul {
   display: flex;
   justify-content: flex-end;
   list-style: none;
-  color: black;
   padding: 20px;
 }
 
 nav li {
   margin: 10px;
+  font-weight: bold;
+}
+
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  color: black;
 }
